@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import 'rxjs/add/operator/map';
-import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable()
 export class FromService {
