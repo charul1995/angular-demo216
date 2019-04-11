@@ -24,6 +24,16 @@ export class FromService {
     return this.http.post("https://angular.cppatidar.com/angular/webservice/webservice.php",param);
   }
 
+  getFeeds(){
+      const  params = new  HttpParams().set('method', "getFeeds");
+      return this.http.post('https://angular.cppatidar.com/angular/webservice/webservice.php',params);
+  }
+
+  getFeedBySlug(data:string){
+      const  params = new  HttpParams().set('method', "getFeedBySlug").set('data',JSON.stringify([{"slug":data}]));
+      return this.http.post('https://angular.cppatidar.com/angular/webservice/webservice.php',params);
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

@@ -16,10 +16,11 @@ import { AuthService } from './auth.service';
 import { FromService } from './formSubmit.service';
 import { AuthGuard } from './auth.guard';
 import { FeedsComponent } from './feeds/feeds.component';
+import { FeedDetailComponent } from './feed-detail/feed-detail.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule, HttpClientModule],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, FooterComponent, HomeComponent, DashboardComponent, LoginComponent, RegisterComponent, FeedsComponent ],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, FooterComponent, HomeComponent, DashboardComponent, LoginComponent, RegisterComponent, FeedsComponent, FeedDetailComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AuthService, FromService, AuthGuard]
   

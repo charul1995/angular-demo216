@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FromService } from '../formSubmit.service';
 
 @Component({
   selector: 'app-feeds',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feeds.component.css']
 })
 export class FeedsComponent implements OnInit {
-
-  constructor() { }
+  feedsData : any;
+  constructor(private formService: FromService) { }
 
   ngOnInit() {
+    this.formService.getFeeds().subscribe(
+        (val) => {
+            this.feedsData = val;
+        });
   }
 
 }

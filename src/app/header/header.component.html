@@ -21,6 +21,9 @@
       <a class="nav-link" *ngIf="auth.isLoggednIn()">Welcome {{ auth.getUserName() }}</a>
     </li>
     <li class="nav-item">
+      <a class="nav-link" *ngIf="auth.isLoggednIn()" routerLink="/feeds">Feeds</a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" *ngIf="auth.isLoggednIn()" (click)="auth.logout()">Logout</a>
     </li>
   </ul>
