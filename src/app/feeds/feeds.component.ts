@@ -12,9 +12,10 @@ export class FeedsComponent implements OnInit {
 
   ngOnInit() {
     this.formService.getFeeds().subscribe(
-        (val) => {
-            console.log(val);
-            this.feedsData = val;
+        val => {
+            
+            this.feedsData = val.data;
+            console.log(this.feedsData);
         });
   }
 
