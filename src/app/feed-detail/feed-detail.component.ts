@@ -10,6 +10,15 @@ export class FeedDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    var slug=this.activatedRoute.snapshot.url[1].path?this.activatedRoute.snapshot.url[1].path:'';
+     this.feedService.getFeedBySlug(slug).subscribe( responsedatas =>
+          {
+                   this.feed=responsedatas.data;  
+                   console.log(responsedatas)   ;         
+             }
+      );
+
+  }
   }
 
 }
