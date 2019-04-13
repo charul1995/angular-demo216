@@ -1,11 +1,11 @@
 <div class="container">
-     <h2 class="my-5 ">Global Feed detail  </h2>
-    <div class="list-group" *ngIf="feed">
-        <div class="d-flex w-100 justify-content-between">
+     <h2 >Feed detail  </h2>
+    <div *ngIf="feed">
+        <div >
            <img src="{{feed.image}}" width="200px" height="200px"/>
-          <small class="text-muted">{{ feed.created_datetime | date :'mediumDate' }}</small>
+          <small>{{ feed.created_datetime | date :'mediumDate' }}</small>
         </div>
-        <h5 class="mb-1">{{feed.title}}</h5>
-        <p class="mb-1">{{feed.description}} </p>
+        <h5>{{feed.title}}</h5>
+        <p>{{feed.description}} </p>
     </div>
 </div>
